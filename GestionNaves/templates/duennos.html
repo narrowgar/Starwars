@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+      <table class="Tablita">
+          <thead>
+              <tr>
+                  <td>Piloto</td>
+                  <td>Nave</td>
+                  <td>Fecha adqucicion
+                  </td>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% if Dueño %}
+              {% for dueñe in Dueño %}
+              <tr>
+                  <td>{{ dueñe.Piloto }}</td>
+                  <td>{{ dueñe.Nave}}</td>
+                  <td>{{ dueñe.fechAdquisicion}}</td>
+              </tr>
+              {% endfor %}
+
+              {% else %}
+              <h1>No hay Registros de naves</h1>
+
+              {% endif %}
+          </tbody>
+      </table>
+{% endblock %}

@@ -1,0 +1,106 @@
+body {
+   /* Black like my soul */
+    color: #000000;
+    font-family: Arial, san-serif;
+ }
+  
+ #contact-form {  
+    background-color: gray;
+    width: 465px;  
+    padding: 20px;  
+    margin: 50px auto;  
+    border-radius: 15px;    
+    -moz-border-radius: 15px;  
+    -webkit-border-radius: 15px;  
+ }
+  
+ #contact-form input,  
+ #contact-form select,  
+ #contact-form textarea,  
+ #contact-form label {  
+    font-size: 15px;  
+    margin-bottom: 2px;
+    font-family: Arial, san-serif;
+ }  
+  
+ #contact-form input,  
+ #contact-form select,  
+ #contact-form textarea {  
+    width: 450px;
+    background: #fff;
+    border: 0;
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;
+    margin-bottom: 25px;  
+    padding: 5px;  
+ }  
+  
+ #contact-form input:focus,  
+ #contact-form select:focus,  
+ #contact-form textarea:focus {  
+    background-color: snow;
+ }  
+  
+ #contact-form textarea {  
+    height: 150px;  
+ }  
+  
+ #contact-form #submit {  
+    width: 450px;  
+    color: Black;  
+    border: none;  
+    background-color: White;
+ }  
+  
+ #contact-form #submit:hover {  
+    background-color: Red;  
+    color: White;
+ }
+  
+ input:required, textarea:required {  
+    box-shadow: none;
+    -moz-box-shadow: none;  
+    -webkit-box-shadow: none;  
+    -o-box-shadow: none;  
+ }
+  
+ #contact-form .required {  
+    font-weight:bold;  
+    color: #C4CC00;      
+ }
+  
+ #failure, #success {
+    color: #C4CC00;
+    display:none;  
+ }
+ #carga{
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0%;
+   bottom: 0;
+   margin: auto;
+ 
+}
+#carga img{
+   height: 50%;
+   width: 50%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0%;
+   bottom: 0;
+   margin: auto;
+}
+#contenedor_carga{
+   background-color: rgba(250, 240, 245, 0.9);
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   transition: all 1s ease ;
+   
+   -webkit-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   z-index: 10000;
+}

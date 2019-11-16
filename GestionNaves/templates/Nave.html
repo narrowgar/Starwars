@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+      <table class="Tablita">
+          <thead>
+              <tr>
+                  <td>#</td>
+                  <td>Nombre Nave</td>
+                  <td>Modelo</td>
+                  <td>FechaCreacion</td>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% if Naves %}
+              {% for nave in Naves %}
+              <tr>
+                  <td>{{ nave.idNave }}</td>
+                  <td>{{ nave.nombreNave}}</td>
+                  <td>{{ nave.modelo}}</td>
+                  <td>{{ nave.fechaCreacion}}</td>
+              </tr>
+              {% endfor %}
+
+              {% else %}
+              <h1>No hay Registros de naves</h1>
+
+              {% endif %}
+          </tbody>
+      </table>
+{% endblock %}

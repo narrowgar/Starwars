@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+      <table class="Tablita">
+          <thead>
+              <tr>
+                  <td>id modelo</td>
+                  <td>Nombre</td>
+                  <td>tipo modelo</td>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% if Modelos %}
+              {% for modele in Modelos %}
+              <tr>
+                  <td>{{ modele.idModelo }}</td>
+                  <td>{{ modele.nombreModelo}}</td>
+                  <td>{{ modele.tipoModelo}}</td>
+              </tr>
+              {% endfor %}
+
+              {% else %}
+              <h1>No hay Registros de naves</h1>
+
+              {% endif %}
+          </tbody>
+      </table>
+{% endblock %}

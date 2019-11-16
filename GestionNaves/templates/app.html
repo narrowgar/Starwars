@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Gestion de naves home</h1>
+    <p> Bienvenido a <em>Gestion de naves</em>, django</p>
+
+    <h2>Contenido dinamico</h2>
+
+    <p>La gestion de naves  tienen las siguientes datos a dispocision</p>
+    <ul>
+        <li><strong>Modelos:</strong>{{ num_modelos }} </li>
+        <li><strong>Pilotos:</strong>{{ num_pilotos }} </li>
+        <li><strong>Naves con dueño :</strong>{{ num_dueñoN }} </li>
+        <li><strong>naves:</strong>{{ num_nave }} </li>
+    </ul>
+{% endblock %}

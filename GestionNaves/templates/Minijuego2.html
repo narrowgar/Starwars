@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/minijuego.css' %}">
+    </head>
+    <body background="{% static 'img/StarWars.png' %}">
+        <div class="pointer" >
+            <span id="puntos"></span>
+            <span id="tiempo"></span>
+            <span id="ned"></span>
+        </div>
+        <div class="contenedor">
+            <div id="player">
+            </div>
+        </div>
+        <script src="{% static 'js/Minijuego.js' %}"></script>
+    </body>
+</html>

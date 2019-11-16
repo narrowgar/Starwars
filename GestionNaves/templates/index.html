@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Universo Star wars</title>
+        <meta charset="UTF-8">
+        <meta name="Title" content="El universo de star wars">
+        <meta name="description" content="Unvierso actual, anterior y el universo extendido">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        
+        <!-- minificado libreria  js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- compilacion de botstrap Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/flipclock.css' %}">
+    </head>
+    <body background="{% static 'img/StarWars.png' %}">
+        <div id="contenedor_carga"><div id="carga"> <img id ="gif" src="{% static 'img/f.gif' %}" alt=""></div></div>
+        <div id="pagina">
+        <header>
+            <img  id = "imagenT" src="{% static 'img/TituloStarwars.png' %}" alt="">
+        </header>
+        <nav>
+            <a  class = "enlaces" href="{% url 'app' %}">Guerras clonicas</a>
+            <a  class = "enlaces" href="{% url 'enContru' %}">Universo Expandido</a>
+            <a  class = "enlaces" href="{% url 'Minijuego2' %}">Minijuego2</a>
+            <a  class = "enlaces" href="{% url 'pag2' %}">Galeria Resumen</a>
+            <a  class = "enlaces" href="post.html">Dejanos tu opinion o pide ayuda</a>
+        </nav>
+        <section >
+            <header>
+                <h2 class="texto">Bienvenido al vasto universo de Star Wars</h2>
+                <h6 class="texto">El universo de Star Wars se compone en varias, por asi decirlo, de varios multiversos por sus dueños del momento,
+                    en esta pagina se vera una breve introducion a estos universos y como son diferenciados a otros.
+                    ahora se muestra las historias que han existido:
+                </h6>
+            </header>
+            <!--Esto es una breve introduccion que le pusimos a la pagina para que el usuario sepa de que se trata teoricamente esta pagina principal-->
+        </section>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     
+            <!-- las imagenes que muestra el carrusel -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img  id ="img1" src="{% static 'img/precuela.jpg' %}" alt="">
+                    <div class="carrusel-texto">
+                            <h3>Esta trilogia describe el origen</h3>
+                            <p>Aqui se narra el descubrimiento de la fuerza en el pequeño anakin skywalker quien por los planes maestros del villano principal este se torna contra el bien y se une al lado oscuro de la fuerza.</p>
+                        </div><!--aqui desplegamos la imagen con su respectivo texto informativo-->
+                </div>
+                <div class="item">
+                    <img id ="img2" src="{% static 'img/original.jpg' %}" alt="">
+                    <div class="carrusel-texto">
+                            <h3>Origen del universo cinematografico de starwars</h3>
+                            <p>Aqui aprendemos como un joven Luke Skywalker descubre su 
+                                verdadero origen, hijo del elegido por la fuerza, y siendo este el que reestablesca el balance en el universo</p>
+                        </div><!--aqui desplegamos la imagen con su respectivo texto informativo-->
+                </div>
+                <div class="item">
+                    <img id ="img3" src="{% static 'img/secuelas.jpg' %}" alt="">
+                    <div class="carrusel-texto">
+                            <h3>Secuelas del Tio Disney(raton avaricioso)</h3>
+                            <p>Nos narran una perspectiva de como el universo volvio a tener balance tras la derrota del imperio, pero siempre queda algun rastro de mal, y es asi como se alza la primera orden liderados por Kylo Ren AKA Ben Solo</p>
+                        </div><!--aqui desplegamos la imagen con su respectivo texto informativo-->
+                </div>
+            </div>
+        
+            <!-- los controles de anterior y siguiente-->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">anterior</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">siguiente</span>
+            </a>
+        </div>
+            <!--Crear otra pag referente al form y que este en el enlace de Dejanos tu Opinion-->
+               <aside class="clock"></aside>
+            
+        <footer>
+            
+               
+        </footer>
+    </div>
+    <script>/*Aqui agregamos un pequeño gif de carga en caso de que el internet del usuario es malo*/
+        window.onload = function(){
+            var contenedor = document.getElementById('contenedor_carga');
+            contenedor.style.visibility = "hidden";
+            contenedor.style.opacity = "0";
+        }
+    </script>
+    <script >/*Aqui se muestra como esta vinculado y como se muestra, mediante codifo, el reloj agregado*/
+        var clock = $('.clock').FlipClock({
+            clockFace: 'TwentyFourHourClock'
+        });
+    </script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script><!--Este es el enlace del reloj que se muestra en la apgina que tiene horario del computador(hora:minutos:segundos)-->
+    
+    <script src="{% static 'js/flipclock.js' %}"></script>
+    <script >/*Aqui se muestra como esta vinculado y como se muestra, mediante codifo, el reloj agregado*/
+        var clock = $('.clock').FlipClock({
+            clockFace: 'TwentyFourHourClock'
+        });
+        
+    </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+      <table class="Tablita">
+          <thead>
+              <tr>
+                  <td>Nombres</td>
+                  <td>apellidos</td>
+                  <td>Edad</td>
+                  <td>Fecha nacimiento</td>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% if Pilotos %}
+              {% for pilote in Pilotos %}
+              <tr>
+                  <td>{{ pilote.nombrePiloto }}</td>
+                  <td>{{ pilote.apellidos}}</td>
+                  <td>{{ pilote.edad}}</td>
+                  <td>{{ pilote.fechnac}}</td>
+              </tr>
+              {% endfor %}
+
+              {% else %}
+              <h1>No hay Registros de naves</h1>
+
+              {% endif %}
+          </tbody>
+      </table>
+{% endblock %}

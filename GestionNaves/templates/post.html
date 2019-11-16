@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/post.css">
+</head>
+<body background="img/StarWars.png"> 
+   <div id="contenedor_carga">
+      <div   id="carga"> <img id =  "gif" src="img/ggif.gif" alt="">
+      </div>
+   </div>
+   <div id="contact-form">  
+      <h1>¡Envianos tus coordenadas galacticas para recibir ayuda!</h1>
+      <h2>Envia tu mensaje al sistema galactico mas cercano</h2>  
+      <p id="failure">Te equivocaste de lado Amiguito...</p>  
+      <p id="success">Tu Mensaje fue recibido en el sistema galactico mas cercano.</p>  
+      <form method="post" action="post.html" name="posteo" id=posteo>  
+         <label for="name">Nombre: <span class="required">*</span></label>  
+         <input type="text" id="name" name="name" value="" placeholder="Bobba Fett" required="required" autofocus="autofocus" />  
+              
+         <label for="email">Direccion electronica: <span class="required">*</span></label>  
+         <input type="email" id="email" name="email" value="" placeholder="Palpatine@hotmail.com" required="required" />  
+              
+         <label for="website">Sistema Galactico Perteneciente: </label>  
+         <input type="text" id="webstie" name="website" value="" />  
+              
+         <label for="subject">Motivo de ayuda: </label>  
+         <select id="subject" name="subject">  
+            <option value="hello">El Imperio Ataca</option>
+            <option value="quote">La escoria rebelde se encuentra cerca</option>  
+            <option value="general">Peticion de ayuda general</option>  
+         </select>  
+              
+         <label for="message">Mensaje Explicito: <span class="required">*</span></label>  
+         <textarea id="message" name="message" placeholder="Detalles para la ayuda y supresion del enemigo" required="required"></textarea>  
+            <input type="submit" value="Enviar" id="submit" />
+         </form>  
+      </div>
+   <script>/*Este sutil script hace que el gif de carga desaparesca de la pantalla*/
+         window.onload = function(){
+             var contenedor = document.getElementById('contenedor_carga');
+             contenedor.style.visibility = "hidden";
+             contenedor.style.opacity = "0";
+         }
+   </script>
+   <script src="js/warning.js">
+   </script>
+</body>

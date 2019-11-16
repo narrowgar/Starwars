@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imagenes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/pag2.css' %}">
+</head>
+<body background="{% static 'img/StarWars.png' %}">
+    <div id="contenedor_carga">
+        <div   id="carga"> <img id =  "gif" src="{% static 'img/ggif.gif' %}" alt="">
+        </div>
+    </div><!--Mismo gif de carga en la cual es distinto al anterior para no ser tedioso con el diseño y porque es divertido-->
+    
+        <div class="container">
+            <div class="cards"><!--Esta clase aguanta la imagen y su contenido-->
+                <div class="imgbx">
+                    <div>
+                        <img src="{% static 'img/estrellaMuerte.png' %}" alt="">
+                    <h2>Estrella de la muerte</h2>
+                    </div>
+                </div>
+                <div class="overlay"></div><!--Esta es la capa que al pasar el raton por encima procedera a mostrar el content, ocapando a la imagen en la que esta puesto este overlay-->
+                <div class="content"><!--Texto explicativo de la imagen, no mucha ciencia-->
+                    <h2>La gran destructora de planetas</h2>
+                    <p>Esta gran luna artificial es el arma principal del imperio 
+                    esta arma se se compone por cristales kyber de los jedis caidos,
+                    esta poderosa arma emplea un funcionamiento similar a un sable laser...
+                    pero mas destructivo.
+                    </p>
+                </div>   
+            </div>
+            <div class="cards"><!--Esta clase aguanta la imagen y su contenido-->
+                <div class="imgbx">
+                    <div>
+                        <img width = 200px src="{% static 'img/destru_imperial.png' %}" alt="">
+                        <h2>Destructor imperial</h2>
+                    </div>
+                </div>
+                <div class="overlay"></div><!--Esta es la capa que al pasar el raton por encima procedera a mostrar el content, ocapando a la imagen en la que esta puesto este overlay-->
+                <div class="content"><!--Texto explicativo de la imagen, no mucha ciencia-->
+                    <h2>Destructor imperial</h2>
+                    <p>Fue el La nave que insignia del imperio, 
+                        era una nave eficaz en cuanto transporte de unidades
+                        y destruccion masiva ya sea por espacio o por tierra.
+                    </p>
+                </div>
+            </div>
+            <div class="cards"><!--Esta clase aguanta la imagen y su contenido-->
+                <div class="imgbx">
+                    <div>
+                        <img  width = 200px  src="{% static 'img/caza_imperial.png' %}" alt="">
+                        <h2>tie imperial</h2>
+                    </div>
+                </div>
+                <div class="overlay"></div><!--Esta es la capa que al pasar el raton por encima procedera a mostrar el content, ocapando a la imagen en la que esta puesto este overlay-->
+                <div class="content">
+                    <h2>El caza del imperio</h2>
+                    <p> Este caza era muy barato de hacer, es asi
+                        que el imperio decidio emplear y construir legiones de estos cazas
+                        , y sus variantes, como su mayor recurso de pelea.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>/*Este sutil script hace que el gif de carga desaparesca de la pantalla*/
+                window.onload = function(){
+                    var contenedor = document.getElementById('contenedor_carga');
+                    contenedor.style.visibility = "hidden";
+                    contenedor.style.opacity = "0";
+                }
+        </script>
+</body>
+</html>

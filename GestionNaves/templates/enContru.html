@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/inContrucction.css' %}">
+</head>
+    <body background="{% static 'img/StarWars.png' %}">
+        <div id="contenedor_carga"><div   id="carga"> <img id =  "gif" src="{% static 'img/f.gif' %}" alt=""></div></div>
+        <section>
+            <!--Simplemente desde aca se realiza un span de que la pagina esta pero no tiene contenido y rellenamos con "pagina en construccion" para que el usuario se devuelva por donde vino-->
+        <div class="scrolll text1"> 
+            <div>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+            </div>
+        </div>
+        <div class="scrolll text2"> 
+            <div><!--Simplemente desde aca se realiza un span de que la pagina esta pero no tiene contenido y rellenamos con "pagina en construccion" para que el usuario se devuelva por donde vino-->
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+            </div>
+        </div>
+        <div class="scrolll text3"> 
+            <div>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+            </div>
+        </div><!--Simplemente desde aca se realiza un span de que la pagina esta pero no tiene contenido y rellenamos con "pagina en construccion" para que el usuario se devuelva por donde vino-->
+        <div class="scrolll text4"> 
+            <div>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+            </div>
+        </div>
+        <div class="scrolll text5"> 
+            <div><!--Simplemente desde aca se realiza un span de que la pagina esta pero no tiene contenido y rellenamos con "pagina en construccion" para que el usuario se devuelva por donde vino-->
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+                --Pagina<span>-En</span>-construccion <span>---</span>
+            </div>
+        </div>
+        </section>
+        <script>/*Este sutil script hace que el gif de carga desaparesca de la pantalla*/
+                window.onload = function(){
+                    var contenedor = document.getElementById('contenedor_carga');
+                    contenedor.style.visibility = "hidden";
+                    contenedor.style.opacity = "0";
+                }
+            </script>
+    </body>
+
+</html>

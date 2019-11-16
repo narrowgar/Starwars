@@ -1,0 +1,57 @@
+#pagina-principal{
+    color: #FFE81F;
+    text-align: center;
+}
+.carrusel-texto{
+    text-align: center;
+    color: #FFE81F;
+}
+#img1{
+    width: 500px; height: 550px;
+    display:block;
+margin:auto;
+}
+#img2{
+    width: 500px; height: 550px;
+    display:block;
+margin:auto;
+}
+#img3{
+    width: 500px; height: 550px;
+    display:block;
+margin:auto;
+}
+#img4{
+    width: 500px; height: 550px;
+    display:block;
+margin:auto;
+}
+#contenedor_carga{
+    background-color: rgba(250, 240, 245, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 1s ease ;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    z-index: 10000;
+}
+#carga{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0%;
+    bottom: 0;
+    margin: auto;
+  
+}
+#carga img{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0%;
+    bottom: 0;
+    margin: auto;
+}
