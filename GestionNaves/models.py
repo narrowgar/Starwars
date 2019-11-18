@@ -30,7 +30,7 @@ class Piloto(models.Model):
     #El PositiveIntegerField() es un campo que nos permite solo ingresar datos mayor a 0 y que no sean decimales 
     edad=models.PositiveIntegerField()
     fechnac = models.DateField()
-    fotoPiloto = models.ImageField(upload_to= 'img',default = 'static/img')
+    fotoPiloto = models.ImageField(upload_to= 'img',default = 'img')
 
     def __str__(self):
         return "{0}  ({1})".format(self.nombrePiloto, self.apellidos)
