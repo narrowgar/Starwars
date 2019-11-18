@@ -14,6 +14,7 @@ class Nave(models.Model):
     Modelo = models.ForeignKey(Modelo,on_delete = models.CASCADE,null = False)
     fechaCreacion = models.DateField()
     idNave = models.CharField(max_length=200)
+    fotoNave = models.ImageField(upload_to= 'img',default = 'static/img')
 
     def __str__(self):
         return self.idNave
@@ -22,6 +23,7 @@ class Piloto(models.Model):
     apellidos = models.CharField(max_length=200)
     edad=models.PositiveIntegerField()
     fechnac = models.DateField()
+    fotoPiloto = models.ImageField(upload_to= 'img',default = 'static/img')
 
     def __str__(self):
         return "{0}  ({1})".format(self.nombrePiloto, self.apellidos)
