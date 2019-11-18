@@ -2,7 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    #utilisamos path('',views.index,name='index') para iniciar al principio la view llamada index
     path('',views.index,name='index'),
+    #en el path escribimos donde esta primero la pagina templates/pag2.html para que el views tome este.
     path('templates/pag2.html',views.pag2,name='pag2'),
     path('templates/Minijuego2.html',views.Minijuego2,name='Minijuego2'),
     path('templates/enContru.html',views.enContru,name='enContru'),

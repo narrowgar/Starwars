@@ -6,6 +6,7 @@ from django.views.generic import ListView, DetailView
 # Create your views here.
 
 def app(request):
+    # utilisamos el comando .all().count() para poder contar todos las naves que tenemos
     num_nave = Nave.objects.all().count()
     num_pilotos = Piloto.objects.all().count()
     num_modelo = Modelo.objects.all().count()
