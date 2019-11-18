@@ -88,7 +88,13 @@ def contacto(request):
     if request.method == 'POST': #Si el formulario es enviado#
         form = Formulario(request.POST)
         if form.is_valid():#Si es valido se procesan los datos
-            return HttpResponseRedirect ('Starwars/GestionNaves/') #y se redirige a la url
+            return HttpResponseRedirect ('GestionNaves/templates/') #y se redirige a la url
     else:
         form = Formulario() #formulario vacio
-    return render(request, 'post.html',{'form': form,})   
+    return render(request, 'post.html',{'form': form,})
+def gracias(request):
+   return render(
+        #renderisamos el pedido que es llamar a la  pagina index.html
+        request,
+        "index.html"
+    )

@@ -20,7 +20,7 @@
       <h2>Envia tu mensaje al sistema galactico mas cercano</h2>  
       <p id="failure">Te equivocaste de lado Amiguito...</p>  
       <p id="success">Tu Mensaje fue recibido en el sistema galactico mas cercano.</p>  
-      <form method="post" action="({% url 'index' %})" name="posteo" id=posteo>{% csrf_token %}{{ form.as_p}} 
+      <form method="post" action="{% url 'gracias' %}" name="posteo" id=posteo>{% csrf_token %}{{ form.as_p}} 
          <label for="name">Nombre: <span class="required">*</span></label>  
          <input type="text" id="name" name="name" value="" placeholder="Bobba Fett" required="required" autofocus="autofocus" />  
               

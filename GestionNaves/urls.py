@@ -14,5 +14,6 @@ urlpatterns = [
     path('templates/Modelo.html', views.ModeloLista, name='modelo'),
     path('templates/dueños.html', views.DueñoLista, name='duenno'),
     path('admin/', views.admin,name = 'admin'),
-    path('templates/post.html',views.contacto, name= 'post')
+    path('templates/post.html',views.contacto, name= 'post'),
+    path('templates/index.html',views.gracias, name= 'gracias')
 ]
