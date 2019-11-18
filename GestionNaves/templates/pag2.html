@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Imagenes</title>
+    <!-- Utilisamos  {% load static %} para poder cargar los archivos que estan la carpeta static -->
     {% load static %}
+    <!-- utilizamos este metodo para invocar los css,imagenes o js de la carpeta static{% static 'css/minijuego.css' %}   -->
     <link rel="stylesheet" href="{% static 'css/pag2.css' %}">
 </head>
 <body background="{% static 'img/StarWars.png' %}">

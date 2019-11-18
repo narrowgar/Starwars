@@ -1,5 +1,5 @@
 {% extends "base_generic.html" %}
-
+<!-- extends "base_generic.html" para que esta pagina tenga la forma de la de base_generic.html  -->
 {% block content %}
 <h1>Gestion de naves home</h1>
     <p> Bienvenido a <em>Gestion de naves</em>, django</p>
@@ -8,6 +8,7 @@
 
     <p>La gestion de naves  tienen las siguientes datos a dispocision</p>
     <ul>
+        <!--{{ num_modelos }}  de esta manera invocamos los datos de la views.py  --->
         <li><strong>Modelos:</strong>{{ num_modelos }} </li>
         <li><strong>Pilotos:</strong>{{ num_pilotos }} </li>
         <li><strong>Naves con dueño :</strong>{{ num_dueñoN }} </li>

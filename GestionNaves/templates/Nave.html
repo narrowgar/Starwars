@@ -13,9 +13,12 @@
           </thead>
 
           <tbody>
+              <!--utilizamos el nombre que le dimos al contexto para crear una Lista por medio de un If con el nombre de la lista-->
               {% if Naves %}
+              <!--utilizamos el For para viajar por cada dato que tenga  navee(nombre que se le dio al atributo que contiene todos los datos del modelo Nave) en Naves (Titulo de la Lista)-->
               {% for nave in Naves %}
               <tr>
+                  <!--para poder invocar los atributos que tiene el Modelo Nave utilizamos nave.(Nombre del atributo)-->
                   <td>{{ nave.idNave }}</td>
                   <td>{{ nave.nombreNave}}</td>
                   <td>{{ nave.modelo}}</td>

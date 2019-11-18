@@ -13,12 +13,14 @@ def app(request):
     num_dueñoN = DueñoNave.objects.all().count()
 
     return render(
+        #retornamos un render para renderisar 3 pedidos que son el del request el de la pagina que queremos llamar y el contexto del que queremos agregar.
         request,
         'app.html',
         context={'num_nave':num_nave,'num_pilotos':num_pilotos,'num_modelo':num_modelo,'num_dueñoN':num_dueñoN },
     )
 def index(request):
     return render(
+        #renderisamos el pedido que es llamar a la  pagina index.html
         request,
         "index.html"
     )
@@ -38,7 +40,9 @@ def enContru(request):
         "enContru.html"
     )
 def NaveLista(request):
+    #llamamos a todos las naves que estan en la base de datosla base de datos Nave.objects.all()
     nave = Nave.objects.all()
+    #en el constexto ingresamos la manera de como llamar todos los datos para la lista
     contexto = {'Naves':nave}
     return render(
         request,
@@ -46,6 +50,7 @@ def NaveLista(request):
         contexto
     )
 def PilotoLista(request):
+    #llamamos a todos los pilotos que estan en la base de datosla base de datos Nave.objects.all()
     pilote = Piloto.objects.all()
     contexto = {'Pilotos':pilote}
     return render(

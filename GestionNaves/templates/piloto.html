@@ -12,10 +12,17 @@
               </tr>
           </thead>
 
+
+
+
+    
           <tbody>
+              <!--utilizamos el nombre que le dimos al contexto para crear una Lista por medio de un If con el nombre de la lista-->
               {% if Pilotos %}
+              <!--utilizamos el For para viajar por cada dato que tenga  pilote(nombre que se le dio al atributo que contiene todos los datos del modelo Modelo) en Piloto (Titulo de la Lista)-->
               {% for pilote in Pilotos %}
               <tr>
+                  <!--para poder invocar los atributos que tiene el Modelo Piloto utilizamos pilote.(Nombre del atributo)-->
                   <td>{{ pilote.nombrePiloto }}</td>
                   <td>{{ pilote.apellidos}}</td>
                   <td>{{ pilote.edad}}</td>

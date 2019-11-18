@@ -12,18 +12,22 @@
           </thead>
 
           <tbody>
+              <!--utilizamos el nombre que le dimos al contexto para crear una Lista por medio de un If con el nombre de la lista-->
               {% if Dueño %}
+               <!--utilizamos el For para viajar por cada dato que tenga  dueñe(nombre que se le dio al atributo que contiene todos los datos del modelo DueñoNave) en Dueño (Titulo de la Lista)-->
               {% for dueñe in Dueño %}
               <tr>
+                <!--para poder invocar los atributos que tiene el Modelo utilizamos modele.(Nombre del atributo)-->
                   <td>{{ dueñe.Piloto }}</td>
                   <td>{{ dueñe.Nave}}</td>
                   <td>{{ dueñe.fechAdquisicion}}</td>
               </tr>
               {% endfor %}
-
+            <!--se termina el For -->
               {% else %}
+              <!--en caso de que no exista ningun dato utilizamos un else-->
               <h1>No hay Registros de naves</h1>
-
+              <!--y cerramos con un endif-->
               {% endif %}
           </tbody>
       </table>
