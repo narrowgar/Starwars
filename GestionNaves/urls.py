@@ -12,6 +12,7 @@ urlpatterns = [
     path('templates/Nave.html', views.NaveLista, name='Nave'),
     path('templates/Piloto.html', views.PilotoLista, name='piloto'),
     path('templates/Modelo.html', views.ModeloLista, name='modelo'),
-     path('templates/dueños.html', views.DueñoLista, name='duenno'),
-     path('admin/', views.admin,name = 'admin'),
+    path('templates/dueños.html', views.DueñoLista, name='duenno'),
+    path('admin/', views.admin,name = 'admin'),
+    path('templates/post.html',views.contacto, name= 'post')
 ]

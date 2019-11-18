@@ -3,6 +3,11 @@ from .models import Nave,Modelo,Piloto,DueñoNave
 from django.views import generic 
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
+from django.template import loader, Context
+from django.shortcuts import render
+from django.shortcuts import render_to_response, get_object_or_404
+from django.http import HttpResponseRedirect
+from .Form import Formulario
 # Create your views here.
 
 def app(request):
@@ -79,4 +84,11 @@ def admin(request):
         request,
         "http://127.0.0.1:8000/admin"
     )
-      
+def contacto(request):
+    if request.method == 'POST': #Si el formulario es enviado#
+        form = Formulario(request.POST)
+        if form.is_valid():#Si es valido se procesan los datos
+            return HttpResponseRedirect ('Starwars/GestionNaves/') #y se redirige a la url
+    else:
+        form = Formulario() #formulario vacio
+    return render(request, 'post.html',{'form': form,})   
