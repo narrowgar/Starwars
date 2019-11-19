@@ -1,6 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+{% load static %}
       <table class="Tablita">
           <thead>
               <tr>
@@ -27,7 +28,7 @@
                   <td>{{ pilote.apellidos}}</td>
                   <td>{{ pilote.edad}}</td>
                   <td>{{ pilote.fechnac}}</td>
-                  <td>{{ pilote.fotoPiloto}}</td>
+                  <td><img width = 20% src="{{ pilote.fotoPiloto.url}}" alt="{{ pilote.id }}"></td>
               </tr>
               {% endfor %}
 

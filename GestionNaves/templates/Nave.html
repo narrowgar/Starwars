@@ -23,7 +23,7 @@
                   <td>{{ nave.nombreNave}}</td>
                   <td>{{ nave.modelo}}</td>
                   <td>{{ nave.fechaCreacion}}</td>
-                  <td>{{ nave.fotoNave}}</td>
+                  <td><img width = 20% src="{{ nave.fotoNave.url}}" alt="{{ pilote.id }}"></td>
               </tr>
               {% endfor %}
 

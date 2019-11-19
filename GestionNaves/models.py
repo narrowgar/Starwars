@@ -19,7 +19,7 @@ class Nave(models.Model):
     fechaCreacion = models.DateField()
     idNave = models.CharField(max_length=200)
     #se utiliza el comando ImageField para poder ingresar la imagen en la base de datos
-    fotoNave = models.ImageField(upload_to= 'img',default = 'static/img')
+    fotoNave = models.ImageField(upload_to= 'static/img',default = 'static/img')
 
     def __str__(self):
         #Utilistando __str__ escribimos el id de la Nave
@@ -30,7 +30,7 @@ class Piloto(models.Model):
     #El PositiveIntegerField() es un campo que nos permite solo ingresar datos mayor a 0 y que no sean decimales 
     edad=models.PositiveIntegerField()
     fechnac = models.DateField()
-    fotoPiloto = models.ImageField(upload_to= 'img',default = 'img')
+    fotoPiloto = models.ImageField(upload_to= 'static/img',default = 'static/img')
 
     def __str__(self):
         return "{0}  ({1})".format(self.nombrePiloto, self.apellidos)
