@@ -25,7 +25,9 @@ from GestionNaves import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-
+router.register(r'Nave', views.NaveViewSet)
+router.register(r'Modelo', views.ModeloViewSet)
+router.register(r'Piloto', views.PilotoViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('GestionNaves.urls')),

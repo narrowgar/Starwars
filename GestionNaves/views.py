@@ -10,7 +10,7 @@ from django.http import HttpResponseRedirect
 from .Form import Formulario
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from .serializers import UserSerializer, GroupSerializer
+from .serializers import UserSerializer, GroupSerializer,NaveSerializer,ModeloSerializer,PilotoSerializer
 # Create your views here.
 
 def app(request):
@@ -110,3 +110,15 @@ class UserViewSet(viewsets.ModelViewSet):
 class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+class NaveViewSet(viewsets.ModelViewSet):
+    queryset = Nave.objects.all()
+    serializer_class = NaveSerializer
+
+class ModeloViewSet(viewsets.ModelViewSet):
+    queryset = Modelo.objects.all()
+    serializer_class = ModeloSerializer
+
+class PilotoViewSet(viewsets.ModelViewSet):
+    queryset = Piloto.objects.all()
+    serializer_class = PilotoSerializer
